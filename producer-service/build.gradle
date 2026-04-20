@@ -16,6 +16,7 @@ java {
 
 repositories {
 	mavenCentral()
+//	mavenLocal()
 }
 
 dependencies {
@@ -30,6 +31,8 @@ dependencies {
 	testCompileOnly 'org.projectlombok:lombok'
 	testAnnotationProcessor 'org.projectlombok:lombok'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+//	implementation("org.rabbitmq:common2:1.0-SNAPSHOT")
 }
 
 application {
@@ -40,13 +43,7 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-// Compatibilidade Spring Boot 2.7 + Gradle
 tasks.withType(AbstractCopyTask) {
 	fileMode = null
 	dirMode = null
 }
-//
-//tasks.withType(Copy) {
-//	filePermissions = null
-//	dirPermissions = null
-//}

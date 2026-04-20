@@ -1,12 +1,13 @@
 package br.com.anthony.producer_service.serices;
 
+import dtos.ProductDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
-import static br.com.anthony.producer_service.config.RabbitMQConfig.EXG_NAME_MARKETPLACE;
-import static br.com.anthony.producer_service.config.RabbitMQConfig.QUEUE_PRODUCT_LOG;
+import static constants.RabbitMQConstants.EXG_NAME_MARKETPLACE;
+import static constants.RabbitMQConstants.QUEUE_PRODUCT_LOG;
 
 @Slf4j
 @Service

@@ -13,7 +13,6 @@ import static constants.RabbitMQConstants.*;
 public class RabbitMQConfig {
 
 
-
     @Bean
     public Queue queue() {
         return new Queue(QUEUE_PRODUCT_LOG, false, false, false);

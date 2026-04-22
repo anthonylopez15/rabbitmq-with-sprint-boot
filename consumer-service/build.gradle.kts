@@ -17,6 +17,7 @@ description = "consumer-service"
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -29,9 +30,9 @@ dependencies {
     testCompileOnly("org.projectlombok:lombok")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testAnnotationProcessor("org.projectlombok:lombok")
+
+    implementation("org.rabbitmq:common2:1.0.0")
 }
-
-
 
 
 tasks.withType<Test> {
